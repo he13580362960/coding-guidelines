@@ -31,6 +31,8 @@
 ### 2.1 核心业务模块划分
 基于项目结构，核心模块划分如下：
 
+**{module}**: 父项目根目录，命名要符合业务特性，不得使用backend等不具备识别性的命名。
+
 **{module}-service**: 业务逻辑层 和 数据访问层 (Mapper/XML)。
 
 **{module}-api**: 接口定义层，包含 Dubbo 接口 (Service Interface) 和 DTO/VO。
