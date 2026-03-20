@@ -46,7 +46,17 @@
     *   负责接收 HTTP 请求，参数校验，调用 Service 层。
     *   **禁止**：在 Controller 层直接编写复杂业务逻辑。
     *   **禁止**：在 Controller 层直接调用 Mapper/Dao 层。
-    *   返回对象：统一使用  `ResultData` 包装 `VO` 对象，`ResultData`定义如下。
+    * 返回对象：统一使用  `ResultData` 包装 `VO` 对象，`ResultData`定义如下。
+      ```
+      {
+          "code": "200",
+          "msg": "请求成功",
+          "data": {},
+          "success": true
+      }
+      ```
+    
+      
 2.  **Service 层 (`*.service` / `*.dubbo`)**：
     *   **Local Service (`*.service`)**：处理模块内部的具体业务逻辑，事务控制 (`@Transactional`)。
     *   **Dubbo Service (`*.dubbo` / `*ApiImpl`)**：实现 `*-api` 模块定义的接口，对外暴露服务，主要负责 DTO 转换和调用 Local Service。
