@@ -16,7 +16,7 @@
 ### 3.2 接口设计规范
 1. 请求封装：统一使用src/utils/request.ts，默认Content-Type为application/json，特殊场景（如登录）可切换为multipart/form-data。
 2. 接口路径：统一以业务域前缀分组，如/ipd、/system、/oms、/wms等，具体前缀由VITE_APP_BASE_API拼接。
-3. 返回格式：响应包含code、data、msg，列表可包含rows字段，成功码为'200'，未登录为'401'。code与msg在服务层统一处理，并只返回data数据到业务逻辑中。
+3. 返回格式：响应包含code、data、msg，成功码为'200'，未登录为'401'。code与msg在服务层统一处理，并只返回data数据到业务逻辑中。
 4. 错误处理：默认弹出错误提示，若接口需静默处理需显式设置noErrorMessage。
 
 ### 3.3 依赖与配置规范
