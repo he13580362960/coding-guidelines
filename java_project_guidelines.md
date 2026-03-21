@@ -158,9 +158,10 @@ src/main/resources/
 *   **禁止**：使用`Sytem.out.println`进行日志输出。
 
 ### 4.5 编码规范
-
 1.  **DTO/VO 转换**： 禁止使用 `BeanUtil.copy` 或 `MapStruct` 进行对象转换，严禁将 Entity 直接返回给前端，应使用明确的get/set方法进行取值与赋值。
 3.  **注释要求**：要求生成的代码必须包含符合 Javadoc 规范的注释。
 ## 附则
 *   **枚举使用**：状态值、类型值必须定义枚举类 (`Enum`)，禁止在代码中使用魔术数字（Magic Number）。
 *   **日志规范**：使用 `slf4j` + `logback`。日志打印需包含关键参数（如订单号、用户ID），方便排查问题。
+### 4.6 数据库规范
+当需要进行数据库设计时,参考数据库设计的要求与最佳实践：[database_guidelines.md](D:\workspace\coding-guidelines\database_guidelines.md)
